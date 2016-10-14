@@ -8,12 +8,14 @@ def game():
 
     tries = 0
 
+# Give the range for guessing numbers
     while True:
         while True:
             guess = int(input("Give a guess between 1 and 100:"))
             if guess <= 100 and guess >= 1:
                 break
 
+# Tell player if their guessing number is too low or too high
         if guess < number:
             print("The number is too low.")
             tries += 1
@@ -21,13 +23,14 @@ def game():
             print("The number is too high.")
             tries += 1
 
+# Congratulate player and tell them how many times have player tried
         else:
             tries += 1
             print("Congratulations! You got the right answer!")
             print("You tried", tries, "time(s).")
             break
 
-
+# Ask player if they want to play again
 def main():
     while True:
         answer = input("Do you want to play? (Y/N)")
